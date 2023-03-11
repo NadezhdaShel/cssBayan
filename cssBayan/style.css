@@ -122,12 +122,6 @@ h1 {
   padding: 5vh 7.5vw;
 }
 
-.accord {}
-
-.accord-item {}
-
-.item-wrapper {}
-
 .item-title {
   display: flex;
   justify-content: space-between;
@@ -226,6 +220,10 @@ input[type="radio"]:checked+.item-wrapper>.item-title>.item-icon {
 }
 
 @media (min-width: 820px) {
+  .main {
+    padding: 5vh 15vw;
+  }
+
   h1 {
     font-size: 4.0rem;
   }
@@ -233,15 +231,21 @@ input[type="radio"]:checked+.item-wrapper>.item-title>.item-icon {
     font-size: 2.2rem;
   }
   .item-content {
-    padding: 0 20vw;
+    padding: 0 10vw;
   }
 }
 
 @media (min-width: 1920px) {
+  .main {
+    padding: 5vh 20vw;
+  }
   h1 {
     font-size: 4.5rem;
   }
   .item-title {
     font-size: 2.8rem;
+  }
+  .item-content {
+    padding: 0 10vw;
   }
 }
