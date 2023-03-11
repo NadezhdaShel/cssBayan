@@ -73,6 +73,13 @@ img {
        url('assets/fonts/montserrat-v25-latin-700.svg#Montserrat') format('svg'); /* Legacy iOS */
 }
 
+:root {
+  --color-active: #8a37cd;
+  --color-title: #4d1977;
+  --color-primary: #180725;
+}
+
+
 html,
 body {
   height: 100%;
@@ -90,12 +97,14 @@ body {
   font-style: normal;
   font-weight: 400;
   line-height: 1.5;
-  color: #636060;
+  color: var(--color-primary);
 }
 
 h1 {
   font-size: 4rem;
   margin: 0.67em 0;
+  font-weight: 700;
+  color: var(--color-title);
 }
 
 .page {
@@ -133,7 +142,7 @@ h1 {
   border-top: 1px solid #d2d9e2;
   font-size: 2.2rem;
   font-weight: 700;
-  color: #000;
+  color: var(--color-primary);
   transition: color 0.7s ease;
 }
 
@@ -164,7 +173,7 @@ h1 {
 }
 
 input[type="radio"]:checked+.item-wrapper>.item-title {
-  color: #0059d9;
+  color: var(--color-active);
 }
 
 input[type="radio"]:checked+.item-wrapper>.item-content {
