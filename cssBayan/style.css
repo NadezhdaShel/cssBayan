@@ -154,6 +154,7 @@ h1 {
   max-height: 0;
   margin-bottom: 35px;
   overflow: hidden;
+  text-align: center;
   opacity: 0;
   transform: scale(0);
   transition: all 0.7s ease;
@@ -188,5 +189,42 @@ input[type="radio"]:checked+.item-wrapper>.item-content {
 
 input[type="radio"]:checked+.item-wrapper>.item-title>.item-icon {
   background-image: url(assets/svg/xmark.svg);
-  transform: rotate(90deg);
+}
+
+/*Media*/
+
+@media (min-width: 321px) {
+  .item-wrapper {
+    cursor: pointer;
+  }
+
+  .accord-item:hover .item-content {
+    max-height: 100vh;
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  .item-icon {
+    opacity: 0;
+  }
+
+  .accord:hover .item-icon {
+    opacity: 1;
+  }
+
+  input[type="radio"]:checked+.item-wrapper>.item-title {
+    color: var(--color-active);
+  }
+
+  input[type="radio"]:active+.item-wrapper>.item-title {
+    color: var(--color-active);
+  }
+
+  input[type="radio"]:active+.item-wrapper>.item-content {
+    opacity: 0.5;
+  }
+
+  .accord:hover input[type="radio"]:checked+.item-wrapper>.item-title {
+    color: var(--color-primary);
+  }
 }
