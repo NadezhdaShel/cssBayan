@@ -147,6 +147,7 @@ h1 {
 .item-content {
   max-height: 0;
   margin-bottom: 35px;
+  padding: 0;
   overflow: hidden;
   text-align: center;
   opacity: 0;
@@ -156,7 +157,7 @@ h1 {
 }
 
 .item-content img {
-  width: 40vw;
+  width: 100%;
   height: auto;
   object-fit: contain;
   object-position: center;
@@ -231,6 +232,9 @@ input[type="radio"]:checked+.item-wrapper>.item-title>.item-icon {
   }
   .item-title {
     font-size: 2.2rem;
+  }
+  .item-content {
+    padding: 0 10vw;
   }
 }
 
