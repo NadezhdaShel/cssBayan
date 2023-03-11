@@ -190,7 +190,7 @@ input[type="radio"]:checked+.item-wrapper>.item-title>.item-icon {
 
 /*Media*/
 
-@media (min-width: 321px) {
+@media (min-width: 321px) and (hover: hover) and (pointer: fine) {
   .item-wrapper {
     cursor: pointer;
   }
