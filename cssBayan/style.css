@@ -166,7 +166,7 @@ h1 {
   display: inline-block;
   height: 20px;
   width: 20px;
-  background-image: url(/assets/svg/arrows.svg);
+  background-image: url(assets/svg/down.svg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: 100%;
@@ -183,6 +183,6 @@ input[type="radio"]:checked+.item-wrapper>.item-content {
 }
 
 input[type="radio"]:checked+.item-wrapper>.item-title>.item-icon {
-  background-image: url(/assets/svg/arrows.svg);
+  background-image: url(assets/svg/xmark.svg);
   transform: rotate(90deg);
 }
