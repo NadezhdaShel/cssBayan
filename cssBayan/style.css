@@ -1,0 +1,292 @@
+html {
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
+}
+
+main {
+  display: block;
+}
+
+img {
+  border-style: none;
+  vertical-align: top;
+}
+
+input {
+  font-family: inherit;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+  overflow: visible;
+}
+
+[type=checkbox],
+[type=radio] {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0;
+}
+
+[hidden] {
+  display: none;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html,
+body,
+div,
+p,
+img {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/* montserrat-regular - cyrillic_latin */
+@font-face {
+  font-display: swap;
+  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  src: url("assets/fonts/montserrat-v25-cyrillic_latin-regular.eot");
+  /* IE9 Compat Modes */
+  src: url("assets/fonts/montserrat-v25-cyrillic_latin-regular.eot?#iefix") format("embedded-opentype"), url("assets/fonts/montserrat-v25-cyrillic_latin-regular.woff2") format("woff2"), url("assets/fonts/montserrat-v25-cyrillic_latin-regular.woff") format("woff"), url("assets/fonts/montserrat-v25-cyrillic_latin-regular.ttf") format("truetype"), url("assets/fonts/montserrat-v25-cyrillic_latin-regular.svg#Montserrat") format("svg");
+  /* Legacy iOS */
+}
+
+/* montserrat-700 - cyrillic_latin */
+@font-face {
+  font-display: swap;
+  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  src: url("assets/fonts/montserrat-v25-cyrillic_latin-700.eot");
+  /* IE9 Compat Modes */
+  src: url("assets/fonts/montserrat-v25-cyrillic_latin-700.eot?#iefix") format("embedded-opentype"), url("assets/fonts/montserrat-v25-cyrillic_latin-700.woff2") format("woff2"), url("assets/fonts/montserrat-v25-cyrillic_latin-700.woff") format("woff"), url("assets/fonts/montserrat-v25-cyrillic_latin-700.ttf") format("truetype"), url("assets/fonts/montserrat-v25-cyrillic_latin-700.svg#Montserrat") format("svg");
+  /* Legacy iOS */
+}
+
+:root {
+  --color-active: #8a37cd;
+  --color-title: #4d1977;
+  --color-primary: #180725;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  min-height: 100%;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--color-primary);
+}
+
+h1 {
+  font-size: 3.2rem;
+  margin: 0.5em 0;
+  font-weight: 700;
+  color: var(--color-title);
+}
+
+.page {
+  width: 100%;
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.wrapper {
+  width: 100vw;
+  margin: 0 auto;
+  padding-left: 7.5vw;
+  padding-right: 7.5vw;
+}
+
+.header {
+  padding-top: 5vh;
+  padding-bottom: 5vh;
+}
+
+.main {
+  padding-top: 0;
+  padding-bottom: 5vh;
+}
+
+.item-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1.5em 0;
+  border-top: 1px solid #b995f7;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  -webkit-transition: color 0.7s ease;
+  -o-transition: color 0.7s ease;
+  transition: color 0.7s ease;
+}
+
+.item-text {
+  margin-right: 30px;
+}
+
+.item-content {
+  max-height: 0;
+  margin-bottom: 2em;
+  padding: 0 5vw;
+  overflow: hidden;
+  text-align: center;
+  opacity: 0;
+  -webkit-transform: scale(0);
+      -ms-transform: scale(0);
+          transform: scale(0);
+  -webkit-transition: all 0.7s ease;
+  -o-transition: all 0.7s ease;
+  transition: all 0.7s ease;
+}
+
+.item-content img {
+  width: 100%;
+  height: auto;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -o-object-position: center;
+     object-position: center;
+}
+
+.item-icon {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  display: inline-block;
+  height: 1em;
+  width: 1em;
+  background-image: url(assets/svg/down.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+input[type=radio]:checked + .item-wrapper > .item-title {
+  color: var(--color-active);
+}
+
+input[type=radio]:checked + .item-wrapper > .item-content {
+  max-height: 1000vh;
+  -webkit-transform: scale(1);
+      -ms-transform: scale(1);
+          transform: scale(1);
+  opacity: 1;
+}
+
+input[type=radio]:checked + .item-wrapper > .item-title > .item-icon {
+  background-image: url(assets/svg/xmark.svg);
+}
+
+/*Media*/
+
+@media (min-width: 321px) and (hover: hover) and (pointer: fine) {
+  .item-wrapper {
+    cursor: pointer;
+  }
+
+  .accord-item:hover .item-content {
+    max-height: 1000vh;
+    -webkit-transform: scale(1);
+        -ms-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
+  
+  .item-icon {
+    opacity: 0;
+  }
+
+  .accord:hover .item-icon {
+    opacity: 1;
+  }
+
+  input[type=radio]:checked + .item-wrapper > .item-title {
+    color: var(--color-active);
+  }
+
+  input[type=radio]:active + .item-wrapper > .item-title {
+    color: var(--color-active);
+  }
+
+  input[type=radio]:active + .item-wrapper > .item-content {
+    opacity: 0.5;
+  }
+
+  .accord:hover input[type=radio]:checked + .item-wrapper > .item-title {
+    color: var(--color-primary);
+  }
+}
+
+@media (min-width: 820px) {
+  .wrapper {
+    padding-left: 15vw;
+    padding-right: 15vw;
+  }
+
+  h1 {
+    font-size: 4rem;
+  }
+
+  .item-title {
+    font-size: 2.2rem;
+  }
+
+  .item-content {
+    padding: 0 10vw;
+  }
+}
+@media (min-width: 1920px) {
+  .wrapper {
+    padding-left: 20vw;
+    padding-right: 20vw;
+  }
+
+  h1 {
+    font-size: 4.5rem;
+  }
+
+  .item-title {
+    font-size: 2.8rem;
+  }
+
+  .item-content {
+    padding: 0 10vw;
+  }
+}
