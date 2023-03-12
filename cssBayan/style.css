@@ -203,7 +203,7 @@ input[type=radio]:checked + .item-wrapper > .item-title {
 }
 
 input[type=radio]:checked + .item-wrapper > .item-content {
-  max-height: 100vh;
+  max-height: 1000vh;
   -webkit-transform: scale(1);
       -ms-transform: scale(1);
           transform: scale(1);
@@ -222,7 +222,7 @@ input[type=radio]:checked + .item-wrapper > .item-title > .item-icon {
   }
 
   .accord-item:hover .item-content {
-    max-height: 100vh;
+    max-height: 1000vh;
     -webkit-transform: scale(1);
         -ms-transform: scale(1);
             transform: scale(1);
